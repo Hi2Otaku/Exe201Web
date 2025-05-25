@@ -116,3 +116,8 @@ html {
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
+
+.vertical-line {
+    border-right: 2px solid #F5F5F5;
+    height: auto;
+}
