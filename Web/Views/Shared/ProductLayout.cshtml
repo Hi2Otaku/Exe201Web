@@ -36,8 +36,8 @@
 						</div>
 					</div>
 					<div class="col-3" style="padding-top: 5px">
-						<a href="https://www.facebook.com" style="text-decoration: none; color: white"><img src="~/img/account-icon.png" height="30px" width="30px" /> Đăng nhập </a>
-						<a href="https://www.instagram.com" style="text-decoration: none; color: white"><img src="~/img/cart-logo.png" height="30px" width="30px" /> Giỏ hàng</a>
+						<a href="/Login" style="text-decoration: none; color: white"><img src="~/img/account-icon.png" height="30" width="30" /> Đăng nhập </a>
+						<a href="/Login/Register" style="text-decoration: none; color: white"><img src="~/img/cart-logo.png" height="30" width="30" /> Giỏ hàng</a>
 					</div>
 				</div>
 			</div>
@@ -48,13 +48,14 @@
 				<div class="d-flex">
 					<div class="dropdown">
 						<button type="button" id="ListButton" aria-expanded="false" class="btn listbtn dropdown-toggle" data-bs-toggle="dropdown" style="color: white">
-							<img src="~/img/list-47-512.png" height="30px" width="30px" />Danh mục
+							<img src="~/img/list-47-512.png" height="30" width="30" />Danh mục
 						</button>
 						<ul class="dropdown-menu" aria-labelledby="ListButton">
-							<li><a class="dropdown-item" href="/List">Makeup </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc da mặt </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc cơ thể </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc tóc </a></li>
+							<li><a class="dropdown-item" href="/List">Tất cả sản phẩm</a></li>
+							<li><a class="dropdown-item" href="/List/Cate1">Makeup </a></li>
+							<li><a class="dropdown-item" href="/List/Cate2">Chăm sóc da mặt </a></li>
+							<li><a class="dropdown-item" href="/List/Cate3">Chăm sóc cơ thể </a></li>
+							<li><a class="dropdown-item" href="/List/Cate4">Chăm sóc tóc </a></li>
 						</ul>
 					</div>
 				</div>
@@ -64,41 +65,11 @@
 
 		<div style="padding: 0px 180px">
 			<div class="bg-white container-fluid" style="padding-top: 20px">
-				<div class="row">
-					<div class="col-3 container-fluid">
-						<img src="~/img/lipstick-item.jpg" class="img-fluid"/>
-					</div>
-					<div class="col-9 container-fluid" style="padding-left: 80px">
-						<h4>Son môi Orione Beauty</h4>
-						<p style="color: coral">399.999đ</p>
-						<p>Son môi Orione Beauty với chất son mềm mịn, bền màu, giúp đôi môi bạn luôn tươi tắn và quyến rũ.</p>
-						<p>
-							<strong>Thông tin sản phẩm:</strong><br />
-							- Trọng lượng: 3.5g<br />
-							- Thành phần: Dầu dừa, sáp ong, vitamin E<br />
-							- Xuất xứ: Việt Nam
-						</p>
-						<p>
-							<strong>Hướng dẫn sử dụng:</strong><br />
-							- Thoa đều lên môi, có thể dùng cọ để tạo đường viền môi sắc nét.<br />
-							- Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp.
-						</p>
-						<p>
-							<strong>Chính sách đổi trả:</strong><br />
-							- Đổi trả trong vòng 7 ngày nếu sản phẩm còn nguyên tem mác, chưa qua sử dụng.<br />
-							- Không áp dụng đổi trả với sản phẩm đã mở nắp hoặc không còn nguyên vẹn.
-						</p>
-						<input type="button" name="addtocart" value="Thêm vào giỏ hàng" class="btn" style="color: white; background-color: coral; padding: 10px"/>
-						<input type="button" name="buy" value="Mua ngay" class="btn" style="color: white; background-color: hotpink; padding: 10px" />
-					</div>
+				<div>
+					@RenderBody()
 				</div>
 			</div>
 		</div>
-
-		<div>
-			@RenderBody()
-		</div>
-
 	</div>
 	<script src="~/js/site.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

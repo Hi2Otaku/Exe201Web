@@ -20,7 +20,7 @@
 					<div class="col-4">
 						<a href="/Home" style="text-decoration: none">
 							<div class="row">
-								<img class="col-3" src="~/img/logo-white.png" height="50px" width="50px" />
+								<img class="col-3" src="~/img/logo-white.png" height="50" width="50" />
 								<h5 class="col-9" style="color: white; padding-top: 10px">ORIONE BEAUTY</h5>
 							</div>
 						</a>
@@ -51,10 +51,11 @@
 							<img src="~/img/list-47-512.png" height="30px" width="30px" />Danh mục
 						</button>
 						<ul class="dropdown-menu" aria-labelledby="ListButton">
-							<li><a class="dropdown-item" href="/List">Makeup </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc da mặt </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc cơ thể </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc tóc </a></li>
+							<li><a class="dropdown-item" href="/List">Tất cả sản phẩm</a></li>
+							<li><a class="dropdown-item" href="/List/Cate1">Makeup </a></li>
+							<li><a class="dropdown-item" href="/List/Cate2">Chăm sóc da mặt </a></li>
+							<li><a class="dropdown-item" href="/List/Cate3">Chăm sóc cơ thể </a></li>
+							<li><a class="dropdown-item" href="/List/Cate4">Chăm sóc tóc </a></li>
 						</ul>
 					</div>
 				</div>
@@ -68,14 +69,14 @@
 				<div class="container horizontal-scrollbar">
 					<div class="row flex-nowrap">
 						<div class="col-2">
-							<a href="/Product" style="text-decoration: none; color: black">
+							<a href="/Product/YSL153" style="text-decoration: none; color: black">
 								<img src="~/img/makeup/YSL153.png" height="200px" width="200px" class="hoverimg" />
 								<p class="text-truncate"> Son YSL 153 Chili Provocation</p>
 								<p style="color: red; font-weight: bold">830.000đ</p>
 							</a>
 						</div>
 						<div class="col-2">
-							<a href="/Product" style="text-decoration: none; color: black">
+							<a href="/Product/YSL1968BOLD" style="text-decoration: none; color: black">
 								<img src="~/img/makeup/YSL1968BOLD.png" height="200px" width="200px" class="hoverimg" />
 								<p class="text-truncate"> Son YSL The Bold 1968 Statement</p>
 								<p style="color: red; font-weight: bold">950.000đ</p>
@@ -129,7 +130,7 @@
 								<p class="text-truncate"> Dầu gội khô LIVING PROOF Perfect hair Day (PhD) Dry Shampoo</p>
 								<p style="color: red; font-weight: bold">750.000đ</p>
 							</a>
-						</div>					
+						</div>
 					</div>
 				</div>
 			</div>
@@ -139,14 +140,14 @@
 				<div class="container horizontal-scrollbar">
 					<div class="row flex-nowrap">
 						<div class="col-2">
-							<a href="/Product" style="text-decoration: none; color: black">
+							<a href="/Product/YSL153" style="text-decoration: none; color: black">
 								<img src="~/img/makeup/YSL153.png" height="200px" width="200px" class="hoverimg" />
 								<p class="text-truncate"> Son YSL 153 Chili Provocation</p>
 								<p style="color: red; font-weight: bold">830.000đ</p>
 							</a>
 						</div>
 						<div class="col-2">
-							<a href="/Product" style="text-decoration: none; color: black">
+							<a href="/Product/YSL1968BOLD" style="text-decoration: none; color: black">
 								<img src="~/img/makeup/YSL1968BOLD.png" height="200px" width="200px" class="hoverimg" />
 								<p class="text-truncate"> Son YSL The Bold 1968 Statement</p>
 								<p style="color: red; font-weight: bold">950.000đ</p>
@@ -223,7 +224,7 @@
 								<div class="carousel-item">
 									<div class="col-3">
 										<div class="card">
-											<div class="card-img">									
+											<div class="card-img">
 												<img src="~/img/brand/bodiance.jpg" class="img-fluid" />
 											</div>
 										</div>
@@ -273,7 +274,7 @@
 											</div>
 										</div>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</div>
 					</div>
@@ -282,7 +283,7 @@
 
 			<div class="container bg-white">
 				<div style="margin-top: 20px">
-					<div class="container-fluid">						
+					<div class="container-fluid">
 						<div class="row">
 							<div class="col-6">
 								<h5 style="color: black; padding-left: 20px; padding-top: 10px">Makeup</h5>
@@ -302,7 +303,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="container-fluid">						
+					<div class="container-fluid">
 						<div class="row">
 							<div class="col-6">
 								<h5 style="color: black; padding-left: 20px; padding-top: 10px">Chăm sóc cơ thể</h5>
@@ -330,6 +331,34 @@
 		<div>
 			@RenderBody()
 		</div>
+
+		<div class="bg-white" style="padding-top: 20px">
+			<div style="padding: 0px 180px">
+				<div class="row" style="padding: 0px 10px">
+					<div class="col-3">
+						<p style="font-weight: bold; color: black; font-size: small">Hỗ trợ khách hàng</p>						
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Các câu hỏi thường gặp </a> <br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Gửi yêu cầu hỗ trợ </a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Hướng dẫn đặt hàng </a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Phương thức vận chuyển </a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Chính sách đổi trả </a><br />
+					</div>
+					<div class="col-3">
+						<p style="font-weight: bold; color: black; font-size: small">Về chúng tôi</p>
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Giới thiệu Orione Beauty</a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Chính sách bảo mật </a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Điều khoản sử dụng </a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small">Liên hệ </a>					<br />
+					</div>
+					<div class="col-3">
+						<p style="font-weight: bold; color: black; font-size: small">Theo dõi Orione Beauty</p>
+						<a href="#" style="text-decoration: none; color: black; font-size: small"><img src="~/img/Facebook_Logo_Secondary.png" width="20" height="20" /> Facebook</a><br />
+						<a href="#" style="text-decoration: none; color: black; font-size: small"><img src="~/img/Instagram_Glyph_Black.png" width="20" height="20" /> Instagram </a>		<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<script src="~/js/site.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

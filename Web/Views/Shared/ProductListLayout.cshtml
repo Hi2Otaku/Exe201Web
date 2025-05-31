@@ -36,8 +36,8 @@
 						</div>
 					</div>
 					<div class="col-3" style="padding-top: 5px">
-						<a href="https://www.facebook.com" style="text-decoration: none; color: white"><img src="~/img/account-icon.png" height="30px" width="30px" /> Đăng nhập </a>
-						<a href="https://www.instagram.com" style="text-decoration: none; color: white"><img src="~/img/cart-logo.png" height="30px" width="30px" /> Giỏ hàng</a>
+						<a href="/Login" style="text-decoration: none; color: white"><img src="~/img/account-icon.png" height="30px" width="30px" /> Đăng nhập </a>
+						<a href="/Login/Register" style="text-decoration: none; color: white"><img src="~/img/cart-logo.png" height="30px" width="30px" /> Giỏ hàng</a>
 					</div>
 				</div>
 			</div>
@@ -51,10 +51,11 @@
 							<img src="~/img/list-47-512.png" height="30px" width="30px" />Danh mục
 						</button>
 						<ul class="dropdown-menu" aria-labelledby="ListButton">
-							<li><a class="dropdown-item" href="/List">Makeup </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc da mặt </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc cơ thể </a></li>
-							<li><a class="dropdown-item" href="/List">Chăm sóc tóc </a></li>
+							<li><a class="dropdown-item" href="/List">Tất cả sản phẩm</a></li>
+							<li><a class="dropdown-item" href="/List/Cate1">Makeup </a></li>
+							<li><a class="dropdown-item" href="/List/Cate2">Chăm sóc da mặt </a></li>
+							<li><a class="dropdown-item" href="/List/Cate3">Chăm sóc cơ thể </a></li>
+							<li><a class="dropdown-item" href="/List/Cate4">Chăm sóc tóc </a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,20 +68,10 @@
 				<div class="row">
 					<div class="col-2 vertical-line">
 						<h5>Danh mục sản phẩm</h5>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Son YSL</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Kem Nền</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Phấn má</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Tạo khối</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Bấm Mi - Mascara</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Tẩy trang</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Phấn mắt</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Serum</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Sửa rửa mặt</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Mặt mạ</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Dầu gội đầu</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Dầu dưỡng ẩm tóc</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Kem dưỡng thể</a></p>
-						<p><a href="https://www.facebook.com" style="text-decoration: none; color: black;">Kem tẩy</a></p>
+						<p><a href="/List/Cate1" style="text-decoration: none; color: black;">Makeup</a></p>
+						<p><a href="/List/Cate2" style="text-decoration: none; color: black;">Chăm sóc da mặt</a></p>
+						<p><a href="/List/Cate3" style="text-decoration: none; color: black;">Chăm sóc cơ thể</a></p>
+						<p><a href="/List/Cate4" style="text-decoration: none; color: black;">Chăm sóc tóc </a></p>
 
 						<h5>Khoảng giá</h5>
 						<input type="text" name="lowprice" class="container-fluid form-control" placeholder="Từ" /> - <input type="text" name="highprice" class="container-fluid form-control" placeholder="Đến" />
@@ -88,232 +79,14 @@
 					</div>
 
 					<div class="col-9">
-						<div class="row">
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
-							<div class="col-3">
-								<div class="container" style="padding: -5px">
-									<a href="/Product" style="text-decoration: none">
-										<img src="~/img/lipstick-item.jpg" class="container-fluid hoverimg" />
-										<h5>Son môi</h5>
-										<p style="color: coral">399.999đ</p>
-									</a>
-								</div>
-							</div>
+						<div>
+							@RenderBody()
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div>
-			@RenderBody()
-		</div>
-
+	</div>
 	</div>
 	<script src="~/js/site.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

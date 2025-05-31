@@ -8,5 +8,25 @@ namespace Web.Controllers
 		{
 			return View();
 		}
+		public IActionResult YSL153()
+		{
+			return View();
+		}
+		public IActionResult YSL1968BOLD()
+		{
+			return View();
+		}
+		public IActionResult YSLN8Blouse()
+		{
+			return View();
+		}
+		public IActionResult YSLTheSlim2()
+		{
+			return View();
+		}
+		public IActionResult YSLTheSlim307()
+		{
+			return View();
+		}
 	}
 }
