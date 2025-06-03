@@ -13,18 +13,18 @@ builder.Services.AddDbContext<WebContext>(options =>
 
 builder.Services.AddSession();
 
-// C?u hình Authentication v?i Google
-builder.Services.AddAuthentication(options =>
-{
-	options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-	options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-})
-.AddCookie() // S? d?ng Cookie Authentication
-.AddGoogle(options =>
-{
-	//options.ClientId = "933776615188-m3v3vvevbpe8risegn6mqtu9c2obu880.apps.googleusercontent.com";
-	//options.ClientSecret = "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";
-});
+//// C?u hình Authentication v?i Google
+//builder.Services.AddAuthentication(options =>
+//{
+//	options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//	options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+//})
+//.AddCookie() // S? d?ng Cookie Authentication
+//.AddGoogle(options =>
+//{
+//	//options.ClientId = "933776615188-m3v3vvevbpe8risegn6mqtu9c2obu880.apps.googleusercontent.com";
+//	//options.ClientSecret = "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";
+//});
 
 var app = builder.Build();
 
@@ -35,9 +35,9 @@ if (!app.Environment.IsDevelopment())
 	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
 }
-app.UseAuthentication();  // Thêm dòng này ?? kích ho?t Authentication
+app.UseAuthentication();  
 app.UseAuthorization();
-app.UseSession(); // ??m b?o g?i UseSession sau UseRouting và tr??c UseAuthorization
+app.UseSession(); 
 
 
 app.UseHttpsRedirection();
