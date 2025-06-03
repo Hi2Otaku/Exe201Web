@@ -59,80 +59,80 @@ public class LoginController : Controller
 		return RedirectToAction("Index", "Home");
 	}
 
-	// Bắt đầu đăng nhập với Google
-	public IActionResult GoogleLogin()
-	{
-		var properties = new AuthenticationProperties
-		{
-			RedirectUri = Url.Action("GoogleResponse")
-		};
-		return Challenge(properties, GoogleDefaults.AuthenticationScheme);
-	}
+	//// Bắt đầu đăng nhập với Google
+	//public IActionResult GoogleLogin()
+	//{
+	//	var properties = new AuthenticationProperties
+	//	{
+	//		RedirectUri = Url.Action("GoogleResponse")
+	//	};
+	//	return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+	//}
 
-	public async Task<IActionResult> GoogleResponse()
-	{
-		var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+	//public async Task<IActionResult> GoogleResponse()
+	//{
+	//	var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
 
-		if (!result.Succeeded)
-		{
-			return RedirectToAction("Index", "Home");
-		}
+	//	if (!result.Succeeded)
+	//	{
+	//		return RedirectToAction("Index", "Home");
+	//	}
 
-		var claims = result.Principal?.Identities?.FirstOrDefault()?.Claims;
-		string email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
-		string name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+	//	var claims = result.Principal?.Identities?.FirstOrDefault()?.Claims;
+	//	string email = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+	//	string name = claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-		if (string.IsNullOrEmpty(email))
-		{
-			return RedirectToAction("Index", "Home");
-		}
+	//	if (string.IsNullOrEmpty(email))
+	//	{
+	//		return RedirectToAction("Index", "Home");
+	//	}
 
-		// Tìm user trong hệ thống
-		var existingUser = await _context.Users
-			.Include(u => u.Customer)
-			.FirstOrDefaultAsync(u => u.Email == email);
+	//	// Tìm user trong hệ thống
+	//	var existingUser = await _context.Users
+	//		.Include(u => u.Customer)
+	//		.FirstOrDefaultAsync(u => u.Email == email);
 
-		if (existingUser == null)
-		{
-			// Tạo User mới
-			var newUser = new User
-			{
-				UserName = name ?? email.Split('@')[0],
-				Password = "123",
-				Email = email,
-				Active = true
-			};
+	//	if (existingUser == null)
+	//	{
+	//		// Tạo User mới
+	//		var newUser = new User
+	//		{
+	//			UserName = name ?? email.Split('@')[0],
+	//			Password = "123",
+	//			Email = email,
+	//			Active = true
+	//		};
 
-			// Hash mật khẩu giả (do cần trường PasswordHash)
-			var passwordHasher = new PasswordHasher<User>();
-			newUser.PasswordHash = passwordHasher.HashPassword(newUser, "DefaultPasswordForGoogleLogin");
+	//		// Hash mật khẩu giả (do cần trường PasswordHash)
+	//		var passwordHasher = new PasswordHasher<User>();
+	//		newUser.PasswordHash = passwordHasher.HashPassword(newUser, "DefaultPasswordForGoogleLogin");
 
-			_context.Users.Add(newUser);
-			await _context.SaveChangesAsync(); // Phải lưu trước để có Id
+	//		_context.Users.Add(newUser);
+	//		await _context.SaveChangesAsync(); // Phải lưu trước để có Id
 
-			// Tạo Customer gắn với User
-			var newCustomer = new Customer
-			{
-				Id = newUser.Id,                  // Liên kết 1-1 với User
-				FullName = newUser.UserName,
-				Gender = null,
-				PhoneNumber = null,
-				DateofBirth = null,
-				Address = null
-			};
+	//		// Tạo Customer gắn với User
+	//		var newCustomer = new Customer
+	//		{
+	//			Id = newUser.Id,                  // Liên kết 1-1 với User
+	//			FullName = newUser.UserName,
+	//			Gender = null,
+	//			PhoneNumber = null,
+	//			DateofBirth = null,
+	//			Address = null
+	//		};
 
-			_context.Customers.Add(newCustomer);
-			await _context.SaveChangesAsync(); // Lưu Customer
+	//		_context.Customers.Add(newCustomer);
+	//		await _context.SaveChangesAsync(); // Lưu Customer
 
-			existingUser = newUser; // Gán lại để dùng dưới
-		}
+	//		existingUser = newUser; // Gán lại để dùng dưới
+	//	}
 
-		// Lưu thông tin đăng nhập vào session
-		HttpContext.Session.SetString("UserId", existingUser.Id.ToString());
-		HttpContext.Session.SetString("UserName", existingUser.UserName);
+	//	// Lưu thông tin đăng nhập vào session
+	//	HttpContext.Session.SetString("UserId", existingUser.Id.ToString());
+	//	HttpContext.Session.SetString("UserName", existingUser.UserName);
 
-		return RedirectToAction("Index", "Home");
-	}
+	//	return RedirectToAction("Index", "Home");
+	//}
 
 
 
