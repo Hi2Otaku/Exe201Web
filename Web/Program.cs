@@ -22,8 +22,8 @@ builder.Services.AddAuthentication(options =>
 .AddCookie() // S? d?ng Cookie Authentication
 .AddGoogle(options =>
 {
-	//options.ClientId = "933776615188-m3v3vvevbpe8risegn6mqtu9c2obu880.apps.googleusercontent.com";
-	//options.ClientSecret = "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";
+	options.ClientId = "933776615188-m3v3vvevbpe8risegn6mqtu9c2obu880.apps.googleusercontent.com";
+	options.ClientSecret = "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";
 });
 
 var app = builder.Build();
