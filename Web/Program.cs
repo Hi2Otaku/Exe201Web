@@ -13,17 +13,6 @@ builder.Services.AddDbContext<WebContext>(options =>
 
 builder.Services.AddSession();
 
-//// C?u hình Authentication v?i Google
-//builder.Services.AddAuthentication(options =>
-//{
-//	options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//	options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-//})
-//.AddCookie() // S? d?ng Cookie Authentication
-//.AddGoogle(options =>
-//{
-
-//});
 
 var app = builder.Build();
 
