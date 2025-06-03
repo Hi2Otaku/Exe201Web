@@ -62,11 +62,23 @@
 	</div>
 
 	<div class="container" style="max-width: 576px">
-		<h5 class="row justify-content-sm-center" style="margin-top: 15px">Đăng nhập</h5>
-		<input class="row justify-content-sm-center form-control" style="margin-top: 15px" type="text" placeholder="Nhập email hoặc số điện thoại" />
-		<input class="row justify-content-sm-center form-control" style="margin-top: 15px" type="password" placeholder="Nhập mật khẩu" />
-		<input type="button" class="row justify-content-sm-center btn container-fluid" style="margin-top: 15px; background-color: lightpink; color: white;" value="Đăng nhập" />
-		<p class="justify-content-sm-start" style="margin-top: 15px">Chưa có tài khoản? <a href="https://www.facebook.com" style="text-decoration: none; color: lightpink;">Đăng ký</a></p>
+		<form method="post" asp-controller="Login" asp-action="Index">
+			<h5 class="row justify-content-sm-center" style="margin-top: 15px">Đăng nhập</h5>
+			<input name="identifier" class="form-control" style="margin-top: 15px" type="text" placeholder="Nhập email hoặc số điện thoại" />
+			<input name="password" class="form-control" style="margin-top: 15px" type="password" placeholder="Nhập mật khẩu" />
+			<input type="submit" class="btn btn-block" style="margin-top: 15px; background-color: lightpink; color: white;" value="Đăng nhập" />
+			<a href="@Url.Action("GoogleLogin", "Login")" class="btn btn-danger" style="margin-top: 15px; width: 100%;">
+				<i class="fab fa-google"></i> Đăng nhập bằng Google
+			</a>
+
+			<p style="margin-top: 15px">Chưa có tài khoản? <a asp-controller="Login" asp-action="Register" style="text-decoration: none; color: lightpink;">Đăng ký</a></p>
+		</form>
+
+		@if (ViewBag.Error != null)
+		{
+			<div class="alert alert-danger mt-3">@ViewBag.Error</div>
+		}
+
 	</div>
 
 	<div>

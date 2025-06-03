@@ -2,3 +2,7 @@
     Layout = "RegisterLayout";
 }
 
+@foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+{
+    <div class="alert alert-danger">@error.ErrorMessage</div>
+}
